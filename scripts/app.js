@@ -13,23 +13,31 @@ async function loadData() {
 loadData()
 
 function displayModulesData(data) {
-    console.log(data)
+    // console.log(data)
     const milestoneContainer = document.querySelector('.milestone-container')
     milestoneContainer.innerHTML = `${data.map(function (milestone) {
         return `
             <div class="milestone">
                 <div class="milestone-heading">
                     <i class="fa-solid fa-square"></i>
-                    <h3>${milestone.name} <i class="fa-solid fa-square-plus" style="color: #B197FC;"></i></h5>
+                    <h4 class="milestone-expand">${milestone.name} <i class="fa-solid fa-square-plus" style="color: #B197FC;"></i></h4>
                 </div>
-                <div class="modules ">
-                    ${milestone.modules.map(function(module){
-                        return `<div class="module-container">
-                                    <p>${module.name} <i class="fa-solid fa-chevron-down"></i></p>
-                                </div>`
-                    }).join("")}
+                <div class="modules hidden">
+                    ${milestone.modules.map(function (module) {
+            return `<div class="module-container">
+                        <p>${module.name} <i class="fa-solid fa-chevron-down"></i></p>
+                    </div>`
+        }).join("")}
                 </div>
             </div>
         `
     }).join("")}`
 }
+
+
+function handleModuleExpand() {
+    console.log('clicked')
+}
+const milestoneHeadings = document.getElementsByClassName('milestone-expand')
+console.log(milestoneHeadings)
+

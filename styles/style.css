@@ -126,6 +126,12 @@ svg {
     font-size: 14px;
 }
 
+.milestone-expand{
+    cursor: pointer;
+}
+
+
+
 
 
 
@@ -145,7 +151,7 @@ svg {
 
 
 /* media query  */
-@media screen and (max-width:768px) {
+@media screen and (max-width:798px) {
     .main-content-container {
         padding: 1.6rem;
         display: flex;
@@ -161,3 +167,4 @@ svg {
         width: 100%;
     }
 }
+
